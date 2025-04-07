@@ -1,14 +1,17 @@
-input = input("Enter the price: ")
-input = discount_percent = input("Enter the discount percent: ")
-price = float(input)
+def calculate_discount(price, discount_percent):
+    if discount_percent >= 20 :
+        discount = (discount_percent / 100) * price
+        return price - discount        
+    else :
+        return price
 
+price_input = input("Enter the original price: ")
+discount_input = input("Enter the discount percent: ") 
 
-calculate_discount(price, discount_percent){
-    if price < 0 {
-        discount = discount_percent / 100 * price
-        discounted_price = price - discount
-        print("Discounted price: ", discounted_price)
-    }else {
-        print("Price : ", price)
-    }
-}
+price = float(price_input)
+discount_percent = float(discount_input)
+
+final_price = calculate_discount(price, discount_percent)
+
+print("Final price:", final_price)
+
